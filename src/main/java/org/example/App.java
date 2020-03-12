@@ -19,8 +19,6 @@ public class App {
         if(option==1)
         {
             System.out.println("Write New employee related data");
-            System.out.println("Write employee ID");
-            int empID= scanner.nextInt();
             System.out.println("Write employee Name");
             String empName= scanner.next();
             System.out.println("Write employee City");
@@ -29,7 +27,7 @@ public class App {
             int empAge= scanner.nextInt();
             System.out.println("Write employee Department");
             String empDept= scanner.next();
-            Employee employee = new Employee(empID,empName,empCity,empAge,empDept);
+            Employee employee = new Employee(empName,empCity,empAge,empDept);
             DBQueries.insertEmployee(employee);
             System.out.println(employee.toString() + "  data is inserted successfully.....");
         }
